@@ -1,6 +1,6 @@
 # r_dart_library
 
-A core library of `R.dart`.
+A core library of [R.dart](https://github.com/YK-Unit/R.dart).
 
 ## Getting Started
 
