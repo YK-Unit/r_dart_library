@@ -1,4 +1,4 @@
-# R.dart.Library
+# r_dart_library
 
 A core library of `R.dart`.
 
