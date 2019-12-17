@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:r_dart_library/assert_svg.dart';
+import 'package:r_dart_library/asset_svg.dart';
 
 void main() {
   test('adds one to input values', () {});

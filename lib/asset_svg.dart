@@ -1,9 +1,9 @@
 /// Copyright (C), 2018-2019, York
-/// FileName: assert_svg.dart
+/// FileName: asset_svg.dart
 /// Author: York
 /// Date: 2019-11-01 11:39
-/// Description: AssertSvg is a svgImageProvider for imageWidget
-/// License: The AssertSvg was copied and modified from [flutter_svg_provider](https://github.com/yang-f/flutter_svg_provider), Apache License 2.0 Copyright (C) 2018-2019 yang-f
+/// Description: AssetSvg is a svgImageProvider for imageWidget
+/// License: The AssetSvg was copied and modified from [flutter_svg_provider](https://github.com/yang-f/flutter_svg_provider), Apache License 2.0 Copyright (C) 2018-2019 yang-f
 
 library r_dart_library;
 
@@ -15,30 +15,30 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_svg/flutter_svg.dart';
 
-class AssertSvg extends ImageProvider<AssertSvg> {
+class AssetSvg extends ImageProvider<AssetSvg> {
   final String asset;
   final double width;
   final double height;
 
-  const AssertSvg(this.asset, {this.width = 100, this.height = 100})
+  const AssetSvg(this.asset, {this.width = 100, this.height = 100})
       : assert(asset != null),
         assert(width != null),
         assert(height != null);
 
   @override
-  Future<AssertSvg> obtainKey(ImageConfiguration configuration) {
-    return SynchronousFuture<AssertSvg>(this);
+  Future<AssetSvg> obtainKey(ImageConfiguration configuration) {
+    return SynchronousFuture<AssetSvg>(this);
   }
 
   @override
-  ImageStreamCompleter load(AssertSvg key) {
+  ImageStreamCompleter load(AssetSvg key) {
     return MultiFrameImageStreamCompleter(
       codec: _loadAsync(key),
       scale: 1.0,
     );
   }
 
-  Future<ui.Codec> _loadAsync(AssertSvg key) async {
+  Future<ui.Codec> _loadAsync(AssetSvg key) async {
     assert(key == this);
 
     var rawSvg = await rootBundle.loadString(asset);
@@ -62,7 +62,7 @@ class AssertSvg extends ImageProvider<AssertSvg> {
   @override
   bool operator ==(dynamic other) {
     if (other.runtimeType != runtimeType) return false;
-    final AssertSvg typedOther = other;
+    final AssetSvg typedOther = other;
     return asset == typedOther.asset && width == typedOther.width && height == typedOther.height;
   }
 
