@@ -31,7 +31,7 @@ class AssetSvg extends ImageProvider<AssetSvg> {
   }
 
   @override
-  ImageStreamCompleter load(AssetSvg key) {
+  ImageStreamCompleter load(AssetSvg key, DecoderCallback decode) {
     return MultiFrameImageStreamCompleter(
       codec: _loadAsync(key),
       scale: 1.0,
