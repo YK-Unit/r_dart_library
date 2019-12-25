@@ -2,7 +2,7 @@ name: r_dart_library
 description: A core library of R.dart
 author: York <yorkzhang520@gmail.com>
 homepage: https://github.com/YK-Unit/r_dart_library
-version: 0.1.0
+version: 0.2.0
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
