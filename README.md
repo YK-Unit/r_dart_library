@@ -24,7 +24,7 @@ Because the Flutter SDK is currently in an unstable state, so I create the follo
 	dependencies:
 	  r_dart_library:
 	    git:
-	      url: git@github.com:YK-Unit/r_dart_library.git
+	      url: https://github.com/YK-Unit/r_dart_library.git
 	      ref: 0.1.0
 	```
 	
