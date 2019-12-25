@@ -14,3 +14,34 @@ Because the Flutter SDK is currently in an unstable state, so I create the follo
 | 0.1.0                  | <1.10.15                     |
 | 0.2.0                  | >=1.10.15                    |
 
+## use this package as a library
+
+1. Depend on it
+	
+	Add this to your package's pubspec.yaml file:
+	
+	```yaml
+	dependencies:
+	  r_dart_library:
+	    git:
+	      url: git@github.com:YK-Unit/r_dart_library.git
+	      ref: 0.1.0
+	```
+	
+2. Install it
+   You can install packages from the command line with Flutter:
+
+   ```shell
+   flutter pub get
+   ```
+
+   Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
+
+3. Import it
+
+  Now in your Dart code, you can use:
+
+  ```dart
+  import 'package:r_dart_library/asset_svg.dart';
+  ```
+
