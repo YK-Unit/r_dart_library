@@ -11,8 +11,8 @@ Because the Flutter SDK is currently in an unstable state, so I create the follo
 
 | r_dart_library version | requires Flutter SDK version |
 | ---------------------- | ---------------------------- |
-| 0.1.0                  | <1.10.15                     |
-| 0.2.0                  | >=1.10.15                    |
+| [0.1.0, 0.1.1]                  | <1.10.15                     |
+| [0.2.0, 0.2.1]                  | >=1.10.15                    |
 
 ## use this package as a library
 

@@ -2,7 +2,7 @@ name: r_dart_library
 description: A core library of R.dart
 author: York <yorkzhang520@gmail.com>
 homepage: https://github.com/YK-Unit/r_dart_library
-version: 0.2.0
+version: 0.2.1
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: "^0.14.1"
+  flutter_svg: ">=0.14.1 <1.0.0"
 
 dev_dependencies:
   flutter_test:
