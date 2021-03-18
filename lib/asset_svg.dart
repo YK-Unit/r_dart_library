@@ -26,41 +26,13 @@ class AssetSvg extends ImageProvider<AssetSvg> {
   Future<AssetSvg> obtainKey(ImageConfiguration configuration) {
     return SynchronousFuture<AssetSvg>(this);
   }
-
-  // @override
-  // ImageStreamCompleter load(AssetSvg key, DecoderCallback decode) {
-  //   return MultiFrameImageStreamCompleter(
-  //     codec: _loadAsync(key),
-  //     scale: 1.0,
-  //   );
-  // }
-
+  
   @override
   ImageStreamCompleter load(AssetSvg key, nil) {
     return OneFrameImageStreamCompleter(
       _loadAsync(key),
     );
   }
-
-  // Future<ui.Codec> _loadAsync(AssetSvg key) async {
-  //   assert(key == this);
-  //
-  //   var rawSvg = await rootBundle.loadString(asset);
-  //   final DrawableRoot svgRoot = await svg.fromSvgString(rawSvg, rawSvg);
-  //   final scale = window.devicePixelRatio;
-  //   final ui.Picture picture = svgRoot.toPicture(
-  //     size: Size(
-  //       width.toDouble() * scale,
-  //       height.toDouble() * scale,
-  //     ),
-  //     clipToViewBox: false,
-  //   );
-  //   var imageW = (width * scale).toInt();
-  //   var imageH = (height * scale).toInt();
-  //   final ui.Image image = await picture.toImage(imageW, imageH);
-  //   var imageData = await image.toByteData(format: ui.ImageByteFormat.png);
-  //   return PaintingBinding.instance!.instantiateImageCodec(imageData!.buffer.asUint8List());
-  // }
 
   Future<ImageInfo> _loadAsync(AssetSvg key) async {
     assert(key == this);
