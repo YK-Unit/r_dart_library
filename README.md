@@ -9,10 +9,11 @@ Because the Flutter SDK is currently in an unstable state, so I create the follo
 
 由于Flutter SDK目前处于不稳定的状态，所以我创建了下面这个依赖版本关系表，让开发者根据这个关系表和Flutter项目的Flutter SDK版本选择`r_dart_library`的正确版本。
 
-| r_dart_library version | requires Flutter SDK version |
-| ---------------------- | ---------------------------- |
-| [0.1.0, 0.1.1]                  | <1.10.15                     |
-| [0.2.0, 0.2.1]                  | >=1.10.15                    |
+| r_dart_library version | requires Flutter SDK version | requires Dart SDK version |
+| ---------------------- | ---------------------------- | ---------------------- |
+| [0.1.0, 0.1.1]                  | <1.10.15                     | <2.12.0 |
+| [0.2.0, 0.2.1]                  | >=1.10.15                    | <2.12.0 |
+| [0.4.0] | >=1.10.15 | >=2.12.0 |
 
 ## use this package as a library
 
