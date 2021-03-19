@@ -20,25 +20,21 @@ class AssetSvg extends ImageProvider<AssetSvg> {
   final double width;
   final double height;
 
-  const AssetSvg(this.asset, {this.width = 100, this.height = 100})
-      : assert(asset != null),
-        assert(width != null),
-        assert(height != null);
+  const AssetSvg(this.asset, {this.width = 100, this.height = 100});
 
   @override
   Future<AssetSvg> obtainKey(ImageConfiguration configuration) {
     return SynchronousFuture<AssetSvg>(this);
   }
-
+  
   @override
-  ImageStreamCompleter load(AssetSvg key, DecoderCallback decode) {
-    return MultiFrameImageStreamCompleter(
-      codec: _loadAsync(key),
-      scale: 1.0,
+  ImageStreamCompleter load(AssetSvg key, nil) {
+    return OneFrameImageStreamCompleter(
+      _loadAsync(key),
     );
   }
 
-  Future<ui.Codec> _loadAsync(AssetSvg key) async {
+  Future<ImageInfo> _loadAsync(AssetSvg key) async {
     assert(key == this);
 
     var rawSvg = await rootBundle.loadString(asset);
@@ -54,9 +50,11 @@ class AssetSvg extends ImageProvider<AssetSvg> {
     var imageW = (width * scale).toInt();
     var imageH = (height * scale).toInt();
     final ui.Image image = await picture.toImage(imageW, imageH);
-    var imageData = await image.toByteData(format: ui.ImageByteFormat.png);
 
-    return PaintingBinding.instance.instantiateImageCodec(imageData.buffer.asUint8List());
+    return ImageInfo(
+      image: image,
+      scale: scale,
+    );
   }
 
   @override
