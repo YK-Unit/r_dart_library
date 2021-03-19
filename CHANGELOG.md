@@ -1,7 +1,7 @@
 
 ## For [Flutter SDK Version >=1.10.15] and [Dart SDK Version >=2.12.0]
 
-#### [0.4.0] - 2021-03-19 BREAKING CHANGES
+#### [0.4.0-nullsafety.0] - 2021-03-19 BREAKING CHANGES
 
 - support nullsafety
 
