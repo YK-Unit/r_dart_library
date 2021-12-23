@@ -1,7 +1,7 @@
 name: r_dart_library
 description: A core library of R.dart
 homepage: 'https://github.com/YK-Unit/r_dart_library'
-version: 1.0.0
+version: 0.4.1
 environment:
   sdk: '>=2.12.0 <3.0.0'
 dependencies:
