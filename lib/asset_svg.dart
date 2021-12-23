@@ -8,7 +8,7 @@
 library r_dart_library;
 
 import 'dart:async';
-import 'dart:ui' as ui show Codec, Image, Picture, ImageByteFormat;
+import 'dart:ui' as ui show Image, Picture;
 import 'dart:ui';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
@@ -26,7 +26,7 @@ class AssetSvg extends ImageProvider<AssetSvg> {
   Future<AssetSvg> obtainKey(ImageConfiguration configuration) {
     return SynchronousFuture<AssetSvg>(this);
   }
-  
+
   @override
   ImageStreamCompleter load(AssetSvg key, nil) {
     return OneFrameImageStreamCompleter(
